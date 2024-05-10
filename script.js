@@ -5,6 +5,13 @@ createDivs(16);
 function createDivs(size) {
     const containerDiv = document.querySelector("#containerDiv");
 
+    if (size > 100) {
+        size = 100;
+    }
+    else if (size < 1) {
+        size = 1;
+    }
+
     for (let x = 0; x < size; x++) {
         var column = document.createElement("div");
         column.classList.add("column");

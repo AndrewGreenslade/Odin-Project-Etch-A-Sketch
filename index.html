@@ -1,33 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Etch A Sketch</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <form id="gridSizeForm">
-      <input
-        type="number"
-        name="gridSize"
-        placeholder="number value"
-        id="gridSizeInput"
-        class="center"
-      />
-      <input
-        type="button"
-        id="gridSizeSubmit"
-        onclick="changeGridSize()"
-        value="Change grid size"
-        class="center"
-      />
-    </form>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Etch A Sketch</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div id="settingsDiv" class="center">
+            <form>
+                <label for="gridSize"
+                    >Changing Grid size (between 1 and 100):</label
+                >
+                <input
+                    type="number"
+                    name="gridSize"
+                    placeholder="Value"
+                    min="1"
+                    max="100"
+                    id="gridSizeInput"
+                />
+                <input
+                    type="button"
+                    id="gridSizeSubmit"
+                    onclick="changeGridSize()"
+                    value="Change grid size"
+                />
+            </form>
 
-    <button id="resetButton" class="center" onclick="ResetGrid()">Reset</button>
+            <button id="resetButton" onclick="ResetGrid()">Reset</button>
+        </div>
 
-    <div id="containerDiv" class="centerDiv"></div>
+        <div id="containerDiv" class="centerDiv"></div>
 
-    <script src="script.js"></script>
-  </body>
+        <script src="script.js"></script>
+    </body>
 </html>
