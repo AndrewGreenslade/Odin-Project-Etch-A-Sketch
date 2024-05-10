@@ -1,0 +1,52 @@
+:root{
+    --pixel-size: 25px;
+}
+
+
+.row{
+    border: 1px solid black;
+    height: var(--pixel-size);
+}
+
+.column{
+    flex-direction: column;
+    width: var(--pixel-size);
+}
+
+.centerDiv{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#containerDiv{
+    display: flex;
+}
+
+#resetButton{
+    background-color: red;
+    color: white;
+    border-radius: 8px;
+    border-color: #F9FAF8;
+    width: 6rem;
+    height: 2rem;
+}
+
+#gridSizeSubmit{  
+    background-color: blue;
+    color: white;
+    border-radius: 8px;
+    border-color: #F9FAF8;
+    width: 10rem;
+    height: 2rem;
+}
