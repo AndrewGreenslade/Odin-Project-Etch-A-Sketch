@@ -1,6 +1,16 @@
 //runs function to create a default 16 x 16 grid
 createDivs(16);
 
+const randomBetween = (min, max) => min + Math.floor(Math.random() * (max - min + 1));
+
+function getRandomRGBValue() {
+    const r = randomBetween(0, 255);
+    const g = randomBetween(0, 255);
+    const b = randomBetween(0, 255);
+    const rgb = `rgb(${r},${g},${b})`;
+    return rgb;
+}
+
 //creates a new grid
 function createDivs(size) {
     const containerDiv = document.querySelector("#containerDiv");
@@ -20,7 +30,7 @@ function createDivs(size) {
         for (let y = 0; y < size; y++) {
             let row = document.createElement("div");
             row.classList.add("row");
-            row.addEventListener('mouseenter', () => { row.style.backgroundColor = 'black' })
+            row.addEventListener('mouseenter', () => { row.style.backgroundColor = getRandomRGBValue() })
 
             column.appendChild(row);
         }
