@@ -1,10 +1,9 @@
 :root{
-    --pixel-size: 25px;
+    --pixel-size: 10px;
 }
 
 
 .row{
-    border: 1px solid black;
     height: var(--pixel-size);
 }
 
@@ -14,6 +13,7 @@
 }
 
 .centerDiv{
+    border: 1px solid black;
     position: absolute;
     left: 50%;
     top: 50%;
